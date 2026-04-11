@@ -1,0 +1,3 @@
+pandas == 2.0.3
+numpy == 2.0.3
+prosperity4btx == 0.1.0

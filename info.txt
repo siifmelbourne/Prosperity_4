@@ -1,0 +1,86 @@
+our folder structure:
+
+imc-prosperity-4/
+│
+├── README.md
+├── info.txt
+├── requirements.txt
+├── .gitignore
+│
+├── src/                         # All trading logic
+│   ├── trader.py                # FINAL submission entry point
+│   ├── strategies/              # Strategy components- contains different strategies for each round
+│   │   ├── market_making.py
+│   │   ├── arbitrage.py
+│   │   ├── momentum.py
+│   │   └── utils.py
+│   │
+│   ├── models/                  # Signals / fair value models
+│   │   ├── fair_value.py
+│   │   ├── order_book_features.py
+│   │   └── alpha_models.py
+│   │
+│   ├── risk/                    # Position sizing / limits
+│   │   └── risk_manager.py
+│   │
+│   └── config.py                # Global params (limits, thresholds)
+│
+├── rounds/                      # EVERYTHING separated by round
+│   ├── round0/
+│   │   ├── data/
+│   │   ├── notebooks/
+│   │   ├── experiments/
+│   │   └── results/
+│   │
+│   ├── round1/
+│   │   ├── data/
+│   │   ├── experiments/
+│   │   └── results/
+│   │
+│   └── round2/
+│
+├── backtest/                    # Your unified backtesting interface
+│   ├── run_backtest.py          # Wrapper for prosperity4btx
+│   ├── run_monte_carlo.py       # Wrapper for prosperity4mcbt
+│   ├── configs/
+│   │   ├── quick.yaml
+│   │   └── heavy.yaml
+│   │
+│   └── utils.py
+│
+├── external/                    # External repos (DON’T mix with your code)
+│   ├── monte_carlo/             # chrispyroberts repo
+│   │   └── imc-prosperity-4/
+│   │
+│   └── replay_backtester/       # optional clone (if not using pip)
+│
+├── outputs/                     # All generated outputs
+│   ├── logs/
+│   ├── backtests/
+│   ├── monte_carlo/
+│   │   ├── dashboards/
+│   │   └── sessions/
+│   │
+│   └── figures/
+│
+├── scripts/                     # Convenience scripts
+│   ├── run_round0.sh
+│   ├── run_mc.sh
+│   └── clean_outputs.sh
+│
+└── notebooks/                   # Global research notebooks
+
+
+
+
+Normal backtester: 
+https://github.com/Xeeshan85/imc-prosperity-4-backtester
+
+use:
+pip install -U prosperity4btx
+
+
+Monte Carlo Backtester:
+https://github.com/chrispyroberts/imc-prosperity-4
+
+This is what is currently installed need to change commands because folder structure is different
