@@ -27,7 +27,7 @@ VENV_PY = (
 
 
 def run(mode="quick"):
-    base_dir = "outputs/monte_carlo"
+    base_dir = "backtest_outputs/monte_carlo"
     run_name = get_new_run_name(base_dir)
 
     run_path = os.path.join(base_dir, run_name)

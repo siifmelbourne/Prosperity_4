@@ -10,7 +10,7 @@ def run(round_id="0"):
 
     trader_path = sys.argv[1]
 
-    base_dir = "outputs/backtests"
+    base_dir = "backtest_outputs/backtests"
     run_name = get_new_run_name(base_dir)
 
     run_path = os.path.join(base_dir, run_name)
